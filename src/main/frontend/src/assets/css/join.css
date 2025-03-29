@@ -1,0 +1,213 @@
+.join-wrapper {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.join-title {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.join-title h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.required-info {
+    position: absolute;
+    right: 0;
+    font-size: 12px !important;
+    margin-top: 0 !important;
+}
+
+.join-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.join-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.join-group label {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.join-group input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    outline: none;
+}
+
+.join-input-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+.join-input-wrap:focus-within {
+    border-bottom: 1px solid #111;
+}
+
+.valid-icon {
+    display: none;
+    color: #10AD06;
+    font-size: 15px;
+    margin: 0 4px;
+}
+
+.eyes-on {
+    display: none;
+}
+
+.eyes-on, .eyes-off {
+    font-size: 15px;
+    margin: 0 4px;
+    cursor: pointer;
+    color: #666;
+}
+
+.input-hint {
+    display: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: #FF382B;
+}
+
+.join-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.join-row-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #ccc !important;
+    font-size: 14px;
+    padding: 8px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.join-row-input:focus {
+    border-bottom: 1px solid #111 !important;
+}
+
+.join-row-btn {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: none;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 6px 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.join-row-btn:hover {
+    border-bottom: 1px solid #111;
+}
+
+.join-agreement h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.terms-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 13px;
+}
+
+.terms-box label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.terms-box input[type="checkbox"] {
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.terms-box button {
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: underline;
+    border: none;
+    margin-left: auto;
+    align-self: center;
+    cursor: pointer;
+}
+
+.join-btn {
+    margin-top: 1rem;
+    padding: 12px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.join-btn:hover {
+    background-color: #444;
+}
+
+/*==================================================*/
+@media (max-width: 768px) {
+    .join-wrapper {
+        padding: 40px 20px;
+    }
+
+    .join-title h1 {
+        font-size: 24px;
+    }
+
+    .required-info {
+        font-size: 12px;
+    }
+
+    .join-group input,
+    .sub-btn {
+        font-size: 14px;
+    }
+
+    .terms-box {
+        font-size: 12px;
+    }
+
+    .join-agreement h2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .join-title h1 {
+        font-size: 22px;
+    }
+}
