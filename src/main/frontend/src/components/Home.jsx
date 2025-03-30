@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import {Link} from "react-router-dom";
 import { Map, MapMarker, CustomOverlayMap, ZoomControl } from "react-kakao-maps-sdk";
+import AOS from "aos";
 import "aos/dist/aos.css";
 import "../assets/css/promotion.css";
 import "../assets/css/article_common.css";
@@ -11,25 +12,23 @@ import "../assets/css/floating.css";
 
 function Home() {
     useEffect(() => {
+        AOS.init({
+            once: true,
+            offset: 500,
+            delay: 200,
+            duration: 1000,
+            easing: 'ease'
+        });
+
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const scrollDown = document.querySelector('.scrollDown');
 
-            if (scrollY > 500) {
+            if (scrollY > 100) {
                 scrollDown?.classList.add('hide');
             } else {
                 scrollDown?.classList.remove('hide');
             }
-
-            document.querySelectorAll("section").forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionId = section.getAttribute("id");
-                const navLink = document.querySelector(`nav ul li a[href="#${sectionId}"]`);
-                if (scrollY >= sectionTop - 500) {
-                    document.querySelectorAll("nav ul li a").forEach(a => a.classList.remove("actives"));
-                    navLink?.classList.add("actives");
-                }
-            });
         };
 
         window.addEventListener("scroll", handleScroll);

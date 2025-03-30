@@ -39,8 +39,9 @@ function Join() {
                     <div className="join-group">
                         <label htmlFor="email">이메일 주소 *</label>
                         <div className="join-input-wrap">
-                            <input type="email" id="email" name="email" required />
+                            <input type="email" id="email" name="email" required/>
                             <i className="ri-check-line valid-icon"></i>
+                            <i className="ri-close-circle-fill clear-button"></i>
                         </div>
                         <small className="input-hint">
                             이메일 형식을 확인해주세요.

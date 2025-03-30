@@ -1,24 +1,27 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import "../assets/css/header.css";
 
 function Header() {
     const [isFixed, setIsFixed] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
+    const isHome = location.pathname === "/";
 
     useEffect(() => {
+        if (!isHome) return;
+
         const handleScroll = () => {
-            const offset = 10;
-            if (window.scrollY > offset) {
-                setIsFixed(true);
-            } else {
-                setIsFixed(false);
-            }
+            setIsFixed(window.scrollY > 1);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [isHome]);
+
+    useEffect(() => {
+        if (!isHome) setIsFixed(true);
+    }, [isHome]);
 
     const handleNavClick = () => {
         setMenuOpen(false);

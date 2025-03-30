@@ -16,6 +16,7 @@ function Login() {
                         <label htmlFor="email">이메일 주소</label>
                         <div className="login-input-wrap">
                             <input type="email" id="email" name="email" required />
+                            <i className="ri-close-circle-fill clear-button"></i>
                         </div>
                     </div>
 

@@ -10,7 +10,7 @@
 }
 
 .login-title h1 {
-    font-size: 28px;
+    font-size: 34px;
     padding-bottom: 10px;
     font-weight: 700;
 }
@@ -53,15 +53,20 @@
     border-bottom: 1px solid #111;
 }
 
-.eyes-on {
-    display: none;
+.clear-button {
+    color: #ccc;
+    cursor: pointer;
 }
 
 .eyes-on, .eyes-off {
+    color: #666;
+    cursor: pointer;
+}
+
+.valid-icon, .clear-button, .eyes-on, .eyes-off {
+    display: none;
     font-size: 15px;
     margin: 0 4px;
-    cursor: pointer;
-    color: #666;
 }
 
 .login-options {
